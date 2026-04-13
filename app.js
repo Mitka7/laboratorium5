@@ -14,6 +14,7 @@ const eth0 = interfaces['eth0'];
 // Wyodrębnienie adresu IPv4 z interfejsu eth0
 const ip = eth0 ? eth0.find(i => i.family === 'IPv4').address : 'Brak IP';
 
+//Przygotowanie strony HTML
 const html = `
 <!DOCTYPE html>
 <html>
