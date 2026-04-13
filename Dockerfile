@@ -14,6 +14,7 @@ ENV APP_VERSION=${VERSION}
 COPY app.js .
 
 #Etap2 
+# Serwer Nginx
 FROM nginx:alpine
 
 # Ponowna deklaracja ARG, aby wartość z Etapu 1 była dostępna w Etapie 2
