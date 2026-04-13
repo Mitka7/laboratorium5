@@ -2,6 +2,7 @@
 # Wykorzystanie obrazu Node
 FROM node:alpine AS builder
 
+# Ustawienie katalogu roboczego
 WORKDIR /app
 
 # Definiowanie argumentu wersji dostępnego podczas budowania
@@ -22,6 +23,7 @@ ENV APP_VERSION=${VERSION}
 # Instalacja Node.js (do odpalenia skryptu) i curl (do sprawdzania zdrowia)
 RUN apk add --update nodejs curl && rm -rf /var/cache/apk/*
 
+# Ustawienie katalogu dla skryptu generującego stronę
 WORKDIR /app
 
 # Kopiowanie tylko niezbędnego pliku app.js z poprzedniego etapu
